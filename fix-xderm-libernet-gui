@@ -2,7 +2,7 @@
 clear
 clear
 echo -e "  ************************************************"
-echo -e "          Download index.php fixer by helmiau "
+echo -e "          Download index.php fixer by cr4r "
 echo -e "  ************************************************"
 echo -e " "
 echo -e "Notes : "
@@ -27,15 +27,15 @@ echo -e " Fixing bug..."
 sleep 2
 echo -e ""
 
-helmiooo=$(cat /etc/config/uhttpd)
-if [[ $helmiooo == *"uhttpd 'mai"* ]]; then
+cfooo=$(cat /etc/config/uhttpd)
+if [[ $cfooo == *"uhttpd 'mai"* ]]; then
 echo -e "Step 1 done ! Resuming to step 2..."
 sleep 1
 sed -i "/config uhttpd 'main'/a list interpreter '.php=/usr/bin/php-cgi'" /etc/config/uhttpd
 fi
 
-helmiooo=$(cat /etc/config/uhttpd)
-if [[ $helmiooo == *"uhttpd 'mai"* ]]; then
+cfooo=$(cat /etc/config/uhttpd)
+if [[ $cfooo == *"uhttpd 'mai"* ]]; then
 echo -e "Step 2 done ! Resuming to step 3..."
 sleep 1
 sed -i "/config uhttpd 'main'/a option ubus_prefix '/ubus'" /etc/config/uhttpd
@@ -46,20 +46,20 @@ rm -rf /root/fix-xderm-mini-gui
 exit
 fi
 
-helmiooo=$(cat /etc/config/uhttpd)
-if [[ $helmiooo == *"uhttpd mai"* ]]; then
+cfooo=$(cat /etc/config/uhttpd)
+if [[ $cfooo == *"uhttpd mai"* ]]; then
 echo -e "Step 3 done ! Resuming to last step..."
 sleep 1
 sed -i "/config uhttpd main/a list interpreter '.php=/usr/bin/php-cgi'" /etc/config/uhttpd
 sleep 1
 fi
 
-helmiooo=$(cat /etc/config/uhttpd)
-if [[ $helmiooo == *"uhttpd mai"* ]]; then
+cfooo=$(cat /etc/config/uhttpd)
+if [[ $cfooo == *"uhttpd mai"* ]]; then
 echo -e "Everything has been done..."
 sleep 1
 sed -i "/config uhttpd main/a option ubus_prefix '/ubus'" /etc/config/uhttpd
-echo -e "rebooting..."
+echo -e "Memulai Ulang..."
 sleep 4
 reboot
 rm -rf /root/fix-xderm-libernet-gui

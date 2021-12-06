@@ -2,41 +2,41 @@
 clear
 clear
 echo -e "  ************************************************"
-echo -e "     Xderm Mini Login Page Remover by helmiau "
+echo -e "     Halaman Login Xderm Mini Remover by cr4r "
 echo -e "  ************************************************"
 echo -e " "
 echo -e "Notes : "
-echo -e "- This script will remove xderm-mini login page"
-echo -e "- Please clear all web history and cache after removal!"
-echo -e "- If bug occured, Open incognito tab"
-echo -e "- If bug still occured, Use other browser"
+echo -e "- Script ini akan menghapus halaman login xderm-mini"
+echo -e "- Hapus semua history dan cache setelah dihapus!"
+echo -e "- Jika ada bug, buka incognito tab"
+echo -e "- Jika masih terjadi bug, buka browser lain"
 echo -e ""
-echo -e " Process starting after 3 secs....."
+echo -e " Proses akan dimulai dalam 3 secs....."
 sleep 3
-echo -e " Removal process started..."
+echo -e " Penghapusan dimulai..."
 sleep 2
 echo -e ""
 
-echo -e " Finding login.php file..."
+echo -e " Mencari file login.php..."
 nyari=$(find /www/xderm)
 if [[ $nyari == *"login.php"* ]]; then
 rm -rf /www/xderm/login.php
-echo -e " login.php file deleted !"
+echo -e " file login.php berhasil dihapus !"
 sleep 1
 else
-echo -e " Removal failed ! because login.php file is unavailable"
+echo -e " Gagal dihapus ! Karena file login.php tidak ada"
 sleep 1
 fi
 
-echo -e " Finding header.php file..."
+echo -e " Mencari file header.php..."
 nyari=$(find /www/xderm)
 if [[ $nyari == *"header.php"* ]]; then
 rm -rf /www/xderm/header.php
-echo -e " header.php file deleted !"
+echo -e " File header.php berhasil dihapus !"
 sleep 1
 else
-echo -e " Removal failed ! because login.php file is unavailable"
+echo -e " Gagal dihapus ! Karena file header.php tidak ditemukan"
 sleep 1
 fi
 
-echo -e " Removal process finished..."
+echo -e " Proses penghapusan selesai..."
